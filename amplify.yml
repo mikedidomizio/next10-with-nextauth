@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install -g yarn
+        - yarn install --frozen-lockfile
+    build:
+      commands:
+        - npm run build
+        - echo "GITHUB_ID=$GITHUB_ID" >> .env
+        - echo "GITHUB_SECRET=$GITHUB_SECRET" >> .env
+        - echo "NEXTAUTH_URL=$NEXTAUTH_URL" >> .env
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
