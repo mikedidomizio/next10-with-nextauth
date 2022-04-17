@@ -1,6 +1,6 @@
-NextJS 10 test with NextAuth, to be tested to see the bare bones if it works with AWS Amplify
+NextJS (10) working with NextAuth boilerplate - deployable to AWS EC2 and Amplify
 
-This confirmed works on both EC2 and Amplify.  Although this is Next10, I suspect Next12 and greater will work.
+This confirmed works on both EC2 and Amplify.  This is Next10 as there were issues getting Next12/Auth working.
 
 Requires a bunch of env vars
 
